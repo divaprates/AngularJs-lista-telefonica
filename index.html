@@ -68,7 +68,11 @@
                     </div>
                 </div>
             </div>
-            <button ng-click="adicionarContato(contato)" class="btn btn-secondary btn-block mt-2">Adicionar cotato</button>
+            <button ng-click="adicionarContato(contato)"
+                class="btn btn-primary btn-block mt-2"
+                ng-disabled="!contato.telefone || !contato.nome">
+                Adicionar cotato
+            </button>
         </div>
 
     </div>

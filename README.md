@@ -6,7 +6,7 @@
 
 ##
 ### Algumas das principais diretivas que utilizamos:
-ng-app, ng-controller, ng-model, ng-click, ng-repeat
+ng-app, ng-controller, ng-model, ng-click, ng-repeat, ng-disabled
 
 <hr/>
 <div style="display: inline_block">
