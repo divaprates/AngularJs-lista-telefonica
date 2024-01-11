@@ -16,6 +16,11 @@
         angular.module("listaTelefonica", []);
         angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope) {
             $scope.app = "Lista Telefonica";
+            $scope.operadoras = [
+                {"nome": "Oi", "codigo": 14},
+                {"nome": "Vivo", "codigo": 15},
+                {"nome": "Tim", "codigo": 41}
+            ];
             $scope.contatos = [
                 {nome: "Isabella", telefone: "988888888"},
                 {nome: "Edward", telefone: "988888888"},
@@ -41,10 +46,12 @@
             <tr>
                 <th>Nome</th>
                 <th>Telefone</th>
+                <th>Operadora</th>
             </tr>
             <tr ng-repeat="contato in contatos">
                 <td>{{contato.nome}}</td>
                 <td>{{contato.telefone}}</td>
+                <td>{{contato.operadora.nome}}</td>
             </tr>
         </table>
         <hr/>
@@ -65,6 +72,16 @@
                     </div>
                     <div class="col">
                         <input type="text" class="form-control" id="telefone" placeholder="telefone" ng-model="contato.telefone">
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-3 text-justify">
+                        Operadora:
+                    </div>
+                    <div class="col">
+                        <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome for operadora in operadoras">
+                            <option value="">Selecione uma operadora</option>
+                        </select>
                     </div>
                 </div>
             </div>
