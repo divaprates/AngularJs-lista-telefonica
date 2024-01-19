@@ -44,11 +44,13 @@
         <h3 ng-bind="app"></h3>
         <table class="table table-striped">
             <tr>
+                <th></th>
                 <th>Nome</th>
                 <th>Telefone</th>
                 <th>Operadora</th>
             </tr>
-            <tr ng-repeat="contato in contatos">
+            <tr ng-repeat="contato in contatos" ng-class="{selecionado : contato.selecionado}">
+                <td><input type="checkbox" ng-model="contato.selecionado"/></td>
                 <td>{{contato.nome}}</td>
                 <td>{{contato.telefone}}</td>
                 <td>{{contato.operadora.nome}}</td>
