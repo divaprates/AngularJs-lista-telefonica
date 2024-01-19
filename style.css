@@ -13,3 +13,9 @@
 .selecionado {
     font-weight: bold;
 }
+
+.marcador-cor {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
