@@ -31,6 +31,14 @@
             $scope.adicionarContato = function (contato) {
                 $scope.contatos.push(contato);
                 delete $scope.contato;
+            };
+
+            $scope.apagarContato = function (contatos) {
+                $scope.contatos = contatos.filter(c => !c.selecionado);
+            };
+
+            $scope.isContatoSelecionado = function (contatos) {
+                return !contatos.some(c => c.selecionado);
             }
         });
 
@@ -91,6 +99,12 @@
                 class="btn btn-primary btn-block mt-2"
                 ng-disabled="!contato.telefone || !contato.nome">
                 Adicionar cotato
+            </button>
+
+            <button ng-click="apagarContato(contatos)"
+                class="btn btn-danger btn-block mt-2"
+                ng-disabled="isContatoSelecionado(contatos)">
+                Apagar cotato
             </button>
         </div>
 
