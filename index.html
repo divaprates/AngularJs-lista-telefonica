@@ -117,7 +117,7 @@
 
             <button ng-click="apagarContato(contatos)"
                 class="btn btn-danger btn-block mt-2"
-                ng-disabled="isContatoSelecionado(contatos)">
+                ng-show="!isContatoSelecionado(contatos)">
                 Apagar cotato
             </button>
         </div>
