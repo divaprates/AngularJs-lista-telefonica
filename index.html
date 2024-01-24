@@ -33,6 +33,7 @@
             $scope.adicionarContato = function (contato) {
                 $scope.contatos.push(contato);
                 delete $scope.contato;
+                $scope.contatoForm.$setPristine();
             };
 
             $scope.apagarContato = function (contatos) {
@@ -71,47 +72,59 @@
         <hr/>
 
         <div>
-            <div class="container">
-                <div class="row mt-1">
-                    <div class="col-3 text-justify">
-                        Nome:
+            <form name="contatoForm">
+                <div class="container">
+                    <div class="row mt-1">
+                        <div class="col-3 text-justify">
+                            Nome:
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="nome" placeholder="nome" ng-model="contato.nome" name="nome" ng-required="true">
+                        </div>
                     </div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="nome" placeholder="nome" ng-model="contato.nome">
+                    <div class="row mt-1">
+                        <div class="col-3 text-justify">
+                            Telefone:
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="telefone" placeholder="telefone" ng-model="contato.telefone" name="telefone" ng-required="true">
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-3 text-justify">
+                            Operadora:
+                        </div>
+                        <div class="col">
+                            <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome for operadora in operadoras">
+                                <option value="">Selecione uma operadora</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-3 text-justify">
+                            Marcador:
+                        </div>
+                        <div class="col">
+                            <select class="form-control" ng-model="contato.cor" ng-options="cor for cor in cores">
+                                <option value="">Selecione uma cor</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <div class="row mt-1">
-                    <div class="col-3 text-justify">
-                        Telefone:
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="telefone" placeholder="telefone" ng-model="contato.telefone">
-                    </div>
+            </form>
+            
+            <div class="mt-2">
+                <div class="alert alert-danger" ng-show="contatoForm.nome.$invalid && contatoForm.nome.$dirty">
+                    Preencha o campo nome!
                 </div>
-                <div class="row mt-1">
-                    <div class="col-3 text-justify">
-                        Operadora:
-                    </div>
-                    <div class="col">
-                        <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome for operadora in operadoras">
-                            <option value="">Selecione uma operadora</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row mt-1">
-                    <div class="col-3 text-justify">
-                        Marcador:
-                    </div>
-                    <div class="col">
-                        <select class="form-control" ng-model="contato.cor" ng-options="cor for cor in cores">
-                            <option value="">Selecione uma cor</option>
-                        </select>
-                    </div>
+                <div class="alert alert-danger" ng-show="contatoForm.telefone.$invalid && contatoForm.telefone.$dirty">
+                    Preencha o campo telefone!
                 </div>
             </div>
+            
             <button ng-click="adicionarContato(contato)"
                 class="btn btn-primary btn-block mt-2"
-                ng-disabled="!contato.telefone || !contato.nome">
+                ng-disabled="contatoForm.$invalid">
                 Adicionar cotato
             </button>
 
