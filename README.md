@@ -6,9 +6,9 @@
 
 ##
 ### Algumas das principais diretivas que utilizamos:
-ng-app, ng-controller, ng-model, ng-click, ng-repeat, ng-disabled, ng-options, ng-class, ng-style, ng-show, ng-if, ng-required
+ng-app, ng-controller, ng-model, ng-click, ng-repeat, ng-disabled, ng-options, ng-class, ng-style, ng-show, ng-if, ng-required, ng-minlength, ng-pattern
 Formulários
-$pristine, $dirty
+$pristine, $dirty, $error
 
 <hr/>
 <div style="display: inline_block">
