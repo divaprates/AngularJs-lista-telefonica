@@ -63,7 +63,7 @@
             </tr>
             <tr ng-repeat="contato in contatos" ng-class="{selecionado : contato.selecionado}">
                 <td><input type="checkbox" ng-model="contato.selecionado"/></td>
-                <td>{{contato.nome}}</td>
+                <td>{{contato.nome | uppercase}}</td>
                 <td>{{contato.telefone}}</td>
                 <td>{{contato.operadora.nome}}</td>
                 <td><div class="marcador-cor" ng-style="{'background-color': contato.cor}"></div></td>
