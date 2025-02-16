@@ -44,6 +44,11 @@
             $scope.isContatoSelecionado = function (contatos) {
                 return !contatos.some(c => c.selecionado);
             }
+
+            $scope.ordenarPor = function (campo) {
+                $scope.criterioDeOrdenacao = campo;
+                $scope.direcaoDaOrdenacao = !$scope.direcaoDaOrdenacao;
+            }
         });
 
     </script>
@@ -58,13 +63,13 @@
         <table class="table table-striped">
             <tr>
                 <th></th>
-                <th>Nome</th>
-                <th>Telefone</th>
+                <th><a href="" ng-click="ordenarPor('nome')">Nome</a></th>
+                <th><a href="" ng-click="ordenarPor('nome')">Telefone</a></th>
                 <th>Operadora</th>
                 <th>Data</th>
                 <th></th>
             </tr>
-            <tr ng-repeat="contato in contatos | filter : {nome : busca}" ng-class="{selecionado : contato.selecionado}">
+            <tr ng-repeat="contato in contatos | filter : {nome : busca} | orderBy : criterioDeOrdenacao : direcaoDaOrdenacao" ng-class="{selecionado : contato.selecionado}">
                 <td><input type="checkbox" ng-model="contato.selecionado"/></td>
                 <td>{{contato.nome | uppercase}}</td>
                 <td>{{contato.telefone}}</td>
@@ -115,7 +120,7 @@
                             Operadora:
                         </div>
                         <div class="col">
-                            <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome for operadora in operadoras">
+                            <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome for operadora in operadoras | orderBy : 'nome'">
                                 <option value="">Selecione uma operadora</option>
                             </select>
                         </div>

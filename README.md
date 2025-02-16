@@ -10,7 +10,7 @@ ng-app, ng-controller, ng-model, ng-click, ng-repeat, ng-disabled, ng-options, n
 $pristine, $dirty, $error
 
 **Filtros:**
-uppercase, date, filter
+uppercase, date, filter, orderBy
 
 <hr/>
 <div style="display: inline_block">
