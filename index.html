@@ -12,14 +12,16 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
     <script src="./angular.js"></script>
+    <script src="./lib/angular-locale_pt-br.js"></script>
+
     <script>
         angular.module("listaTelefonica", []);
         angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope) {
             $scope.app = "Lista Telefonica";
             $scope.operadoras = [
-                {"nome": "Oi", "codigo": 14},
-                {"nome": "Vivo", "codigo": 15},
-                {"nome": "Tim", "codigo": 41}
+                {"nome": "Oi", "codigo": 14, "preco": 1},
+                {"nome": "Vivo", "codigo": 15, "preco": 2},
+                {"nome": "Tim", "codigo": 41, "preco": 3}
             ];
             $scope.cores = ["green",  "blue",  "red",  "yellow",  "orange",  "purple",  "pink",  "brown",  "gray",  "black"];
         
@@ -120,7 +122,7 @@
                             Operadora:
                         </div>
                         <div class="col">
-                            <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome for operadora in operadoras | orderBy : 'nome'">
+                            <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome + ' (' + (operadora.preco | currency) + ')' for operadora in operadoras | orderBy : 'nome'">
                                 <option value="">Selecione uma operadora</option>
                             </select>
                         </div>

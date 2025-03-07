@@ -7,7 +7,7 @@
 ##
 ### Algumas das principais diretivas que utilizamos:
 ng-app, ng-controller, ng-model, ng-click, ng-repeat, ng-disabled, ng-options, ng-class, ng-style, ng-show, ng-if, ng-required, ng-minlength, ng-pattern
-$pristine, $dirty, $error
+$pristine, $dirty, $error, currency
 
 **Filtros:**
 uppercase, date, filter, orderBy
