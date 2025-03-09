@@ -16,21 +16,41 @@
 
     <script>
         angular.module("listaTelefonica", []);
-        angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope) {
+        angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope, $http) {
             $scope.app = "Lista Telefonica";
-            $scope.operadoras = [
-                {"nome": "Oi", "codigo": 14, "preco": 1},
-                {"nome": "Vivo", "codigo": 15, "preco": 2},
-                {"nome": "Tim", "codigo": 41, "preco": 3}
-            ];
+
             $scope.cores = ["green",  "blue",  "red",  "yellow",  "orange",  "purple",  "pink",  "brown",  "gray",  "black"];
+            $scope.contatos = [];
+            $scope.operadoras = [];
+
+            // $scope.operadoras = [
+            //     {"nome": "Oi", "codigo": 14, "preco": 1},
+            //     {"nome": "Vivo", "codigo": 15, "preco": 2},
+            //     {"nome": "Tim", "codigo": 41, "preco": 3}
+            // ];
         
-            $scope.contatos = [
-                {nome: "Isabella", telefone: "988888888", cor: "red", data: new Date()},
-                {nome: "Edward", telefone: "988888888", cor: "yellow", data: new Date()},
-                {nome: "Alice", telefone: "988888888", cor: "green", data: new Date()},
-                {nome: "Jacob", telefone: "988888888", cor: "blue", data: new Date()},
-            ];
+            // $scope.contatos = [
+            //     {nome: "Isabella", telefone: "988888888", cor: "red", data: new Date()},
+            //     {nome: "Edward", telefone: "988888888", cor: "yellow", data: new Date()},
+            //     {nome: "Alice", telefone: "988888888", cor: "green", data: new Date()},
+            //     {nome: "Jacob", telefone: "988888888", cor: "blue", data: new Date()},
+            // ];
+
+            var carregarContatos = function() {
+                $http.get("./data/contatos.json").then(function (response) {
+                    if(response != null) {
+                        $scope.contatos = response.data;
+                    }
+                })
+            };
+
+            var carregarOperadoras = function() {
+                $http.get("./data/operadoras.json").then(function (response) {
+                    if(response != null) {
+                        $scope.operadoras = response.data;
+                    }
+                })
+            };
             
             $scope.adicionarContato = function (contato) {
                 contato.data = new Date();
@@ -51,6 +71,9 @@
                 $scope.criterioDeOrdenacao = campo;
                 $scope.direcaoDaOrdenacao = !$scope.direcaoDaOrdenacao;
             }
+
+            carregarContatos();
+            carregarOperadoras();
         });
 
     </script>

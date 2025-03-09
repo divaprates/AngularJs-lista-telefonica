@@ -12,6 +12,9 @@ $pristine, $dirty, $error
 **Filtros:**
 uppercase, date, filter, orderBy, currency
 
+**Integração com o Back-end**
+GET
+
 <hr/>
 <div style="display: inline_block">
   <img align="center" alt="js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
