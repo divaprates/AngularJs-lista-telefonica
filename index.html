@@ -37,7 +37,7 @@
             // ];
 
             var carregarContatos = function() {
-                $http.get("./data/contatos.json").then(function (response) {
+                $http.get("http://localhost:3000/contatos").then(function (response) {
                     if(response != null) {
                         $scope.contatos = response.data;
                     }
@@ -45,18 +45,23 @@
             };
 
             var carregarOperadoras = function() {
-                $http.get("./data/operadoras.json").then(function (response) {
+                $http.get("http://localhost:3000/operadoras").then(function (response) {
                     if(response != null) {
                         $scope.operadoras = response.data;
                     }
-                })
+                });
             };
             
             $scope.adicionarContato = function (contato) {
                 contato.data = new Date();
-                $scope.contatos.push(contato);
-                delete $scope.contato;
-                $scope.contatoForm.$setPristine();
+                $http.post("http://localhost:3000/contatos", contato).success(function (response) {
+                    delete $scope.contato;
+                    $scope.contatoForm.$setPristine();
+                    carregarContatos();
+                }).error(function (data, status) {
+                    $scope.message = "Aconteceu um problema... " + data;
+                });
+
             };
 
             $scope.apagarContato = function (contatos) {

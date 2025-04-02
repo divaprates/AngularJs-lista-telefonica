@@ -13,7 +13,23 @@ $pristine, $dirty, $error
 uppercase, date, filter, orderBy, currency
 
 **Integração com o Back-end**
-GET
+GET, POST
+
+<hr/>
+
+### JSON Server (API Fake)
+1. Instale o JSON Server
+```
+npm install -g json-server
+```
+
+2. Acesse a pasta ./data, onde está o arquivo db.json
+
+3. Inicie o JSON Server
+```
+json-server --watch db.json --port 3000
+```
+
 
 <hr/>
 <div style="display: inline_block">

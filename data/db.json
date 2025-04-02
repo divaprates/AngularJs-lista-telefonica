@@ -1,0 +1,78 @@
+{
+  "contatos": [
+    {
+      "nome": "Isabella",
+      "telefone": "988888888",
+      "cor": "red",
+      "data": "12/01/2025",
+      "id": "9a5e"
+    },
+    {
+      "nome": "Edward",
+      "telefone": "988888888",
+      "cor": "yellow",
+      "data": "12/01/2025",
+      "id": "5901"
+    },
+    {
+      "nome": "Alice",
+      "telefone": "988888888",
+      "cor": "green",
+      "data": "12/01/2025",
+      "id": "d498"
+    },
+    {
+      "nome": "Jacob",
+      "telefone": "988888888",
+      "cor": "blue",
+      "data": "12/01/2025",
+      "id": "b7d9"
+    },
+    {
+      "id": "0422",
+      "nome": "Jasper",
+      "telefone": "8888-2938",
+      "operadora": {
+        "nome": "Tim",
+        "codigo": 41,
+        "preco": 3,
+        "id": "1bd8"
+      },
+      "cor": "brown",
+      "data": "2025-04-02T01:48:47.299Z"
+    },
+    {
+      "id": "bdef",
+      "nome": "Alice",
+      "telefone": "8733-3928",
+      "operadora": {
+        "nome": "Tim",
+        "codigo": 41,
+        "preco": 3,
+        "id": "1bd8"
+      },
+      "cor": "black",
+      "data": "2025-04-02T01:55:20.046Z"
+    }
+  ],
+  "operadoras": [
+    {
+      "nome": "Oi",
+      "codigo": 14,
+      "preco": 1,
+      "id": "36ab"
+    },
+    {
+      "nome": "Vivo",
+      "codigo": 15,
+      "preco": 2,
+      "id": "c606"
+    },
+    {
+      "nome": "Tim",
+      "codigo": 41,
+      "preco": 3,
+      "id": "1bd8"
+    }
+  ]
+}
