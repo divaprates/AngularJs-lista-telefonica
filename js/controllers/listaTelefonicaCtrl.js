@@ -1,4 +1,4 @@
-angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope, $http) {
+angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope, $http, contatosAPI) {
     $scope.app = "Lista Telefonica";
 
     $scope.cores = ["green",  "blue",  "red",  "yellow",  "orange",  "purple",  "pink",  "brown",  "gray",  "black"];
@@ -19,7 +19,7 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
     // ];
 
     var carregarContatos = function() {
-        $http.get("http://localhost:3000/contatos").then(function (response) {
+        contatosAPI.getContatos().then(function (response) {
             if(response != null) {
                 $scope.contatos = response.data;
             }
