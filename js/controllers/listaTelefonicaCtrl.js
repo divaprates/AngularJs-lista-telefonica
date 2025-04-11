@@ -36,7 +36,7 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
     
     $scope.adicionarContato = function (contato) {
         contato.data = new Date();
-        $http.post("http://localhost:3000/contatos", contato).success(function (response) {
+        contatosAPI.saveContato(contato).success(function (response) {
             delete $scope.contato;
             $scope.contatoForm.$setPristine();
             carregarContatos();

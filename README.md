@@ -10,6 +10,7 @@ ng-app, ng-controller, ng-model, ng-click, ng-repeat, ng-disabled, ng-options, n
 $pristine, $dirty, $error
 
 **Services**
+Factory
 
 **Filtros:**
 uppercase, date, filter, orderBy, currency
