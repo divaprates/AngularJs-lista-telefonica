@@ -51,6 +51,19 @@
       },
       "cor": "orange",
       "data": "2025-04-11T00:44:15.294Z"
+    },
+    {
+      "id": "85a6",
+      "nome": "Rosalie",
+      "telefone": "9089-4848",
+      "operadora": {
+        "nome": "Vivo",
+        "codigo": 15,
+        "preco": 2,
+        "id": "c606"
+      },
+      "cor": "purple",
+      "data": "2025-04-12T02:02:30.954Z"
     }
   ],
   "operadoras": [
