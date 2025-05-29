@@ -53,17 +53,18 @@
       "data": "2025-04-11T00:44:15.294Z"
     },
     {
-      "id": "85a6",
+      "id": "1261",
       "nome": "Rosalie",
-      "telefone": "9089-4848",
+      "telefone": "4545-7878",
       "operadora": {
         "nome": "Vivo",
         "codigo": 15,
         "preco": 2,
         "id": "c606"
       },
-      "cor": "purple",
-      "data": "2025-04-12T02:02:30.954Z"
+      "cor": "pink",
+      "serial": "QGC78,&15T",
+      "data": "2025-05-29T15:11:19.671Z"
     }
   ],
   "operadoras": [

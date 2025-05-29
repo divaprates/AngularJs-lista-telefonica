@@ -18,6 +18,7 @@
     <script src="./js/services/contatosAPIServices.js"></script>
     <script src="./js/services/operadorasAPIServices.js"></script>
     <script src="./js/value/configValue.js"></script>
+    <script src="./js/services/serialGeneratorService.js"></script>
 
     <link rel="stylesheet" type="text/css" href="./style/style.css" media="screen" />
 </head>
@@ -29,6 +30,7 @@
         <table class="table table-striped">
             <tr>
                 <th></th>
+                <th>Serial</th>
                 <th><a href="" ng-click="ordenarPor('nome')">Nome</a></th>
                 <th><a href="" ng-click="ordenarPor('nome')">Telefone</a></th>
                 <th>Operadora</th>
@@ -37,6 +39,7 @@
             </tr>
             <tr ng-repeat="contato in contatos | filter : {nome : busca} | orderBy : criterioDeOrdenacao : direcaoDaOrdenacao" ng-class="{selecionado : contato.selecionado}">
                 <td><input type="checkbox" ng-model="contato.selecionado"/></td>
+                <td>{{contato.serial}}</td>
                 <td>{{contato.nome | uppercase}}</td>
                 <td>{{contato.telefone}}</td>
                 <td>{{contato.operadora.nome}}</td>
