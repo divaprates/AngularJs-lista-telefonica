@@ -16,7 +16,7 @@ Factory, Service, Value, Provider
 uppercase, date, filter, orderBy, currency
 
 **Integração com o Back-end**
-GET, POST
+GET, POST, DELETE
 
 <hr/>
 
