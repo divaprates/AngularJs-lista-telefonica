@@ -35,7 +35,16 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
     };
 
     $scope.apagarContato = function (contatos) {
-        $scope.contatos = contatos.filter(c => !c.selecionado);
+        //$scope.contatos = contatos.filter(c => !c.selecionado);
+        var contatosSelecionados = contatos.filter(c => c.selecionado);
+
+        contatosSelecionados.forEach(c => {
+            contatosAPI.deleteContato(c.id).success(function () {
+                    carregarContatos();
+                }).error(function (error) {
+                    $scope.message = "Aconteceu um problema... " + error;
+                });
+        });
     };
 
     $scope.isContatoSelecionado = function (contatos) {
