@@ -9,8 +9,8 @@
 ng-app, ng-controller, ng-model, ng-click, ng-repeat, ng-disabled, ng-options, ng-class, ng-style, ng-show, ng-if, ng-required, ng-minlength, ng-pattern
 $pristine, $dirty, $error
 
-**Services**
-Factory
+**Serviços**
+Factory, Service, Value
 
 **Filtros:**
 uppercase, date, filter, orderBy, currency
