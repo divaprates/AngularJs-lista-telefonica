@@ -1,19 +1,6 @@
 {
   "contatos": [
     {
-      "id": "4bf3",
-      "nome": "Edward",
-      "telefone": "9922-2928",
-      "operadora": {
-        "nome": "Tim",
-        "codigo": 41,
-        "preco": 3,
-        "id": "1bd8"
-      },
-      "cor": "blue",
-      "data": "2025-04-03T01:25:23.835Z"
-    },
-    {
       "id": "a46f",
       "nome": "Alice",
       "telefone": "9393-3939",
@@ -67,6 +54,20 @@
       "cor": "gray",
       "serial": "YL -FR[F",
       "data": "2025-05-31T02:22:55.897Z"
+    },
+    {
+      "id": "1a1b",
+      "nome": "edward cullen",
+      "telefone": "1122-8988",
+      "operadora": {
+        "nome": "Oi",
+        "codigo": 14,
+        "preco": 1,
+        "id": "36ab"
+      },
+      "cor": "orange",
+      "serial": "\\689/M0B",
+      "data": "2025-05-31T23:35:15.224Z"
     }
   ],
   "operadoras": [
