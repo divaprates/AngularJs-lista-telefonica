@@ -1,19 +1,6 @@
 {
   "contatos": [
     {
-      "id": "a46f",
-      "nome": "Alice",
-      "telefone": "9393-3939",
-      "operadora": {
-        "nome": "Tim",
-        "codigo": 41,
-        "preco": 3,
-        "id": "1bd8"
-      },
-      "cor": "orange",
-      "data": "2025-04-11T00:44:15.294Z"
-    },
-    {
       "id": "4133",
       "nome": "Rosalie",
       "telefone": "7845-8989",
