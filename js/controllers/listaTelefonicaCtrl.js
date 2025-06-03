@@ -10,7 +10,10 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
             if(response != null) {
                 $scope.contatos = response.data;
             }
-        })
+        }, function (error) {
+            $scope.error = "Não foi possível carregar os dados!";
+            console.log($scope.error);
+        });
     };
 
     var carregarOperadoras = function() {
@@ -35,7 +38,6 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
     };
 
     $scope.apagarContato = function (contatos) {
-        //$scope.contatos = contatos.filter(c => !c.selecionado);
         var contatosSelecionados = contatos.filter(c => c.selecionado);
 
         contatosSelecionados.forEach(c => {
