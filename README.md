@@ -16,7 +16,7 @@ Factory, Service, Value, Provider, Config
 uppercase, date, filter, orderBy, currency
 
 **Diretivas**
-directive, replace, restrict
+directive, replace, restrict, scope
 
 **Integração com o Back-end**
 GET, POST, DELETE
