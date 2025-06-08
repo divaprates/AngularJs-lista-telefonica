@@ -36,6 +36,8 @@ npm install -g json-server
 json-server --watch db.json --port 3000
 ```
 
+<hr/>
+![alt text](assets/imageErro.png)
 
 <hr/>
 <div style="display: inline_block">
