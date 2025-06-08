@@ -19,7 +19,15 @@ angular.module("listaTelefonica").directive("uiDate", function () {
             element.bind("keyup", function () {
                 ctrl.$setViewValue(_formatDate(ctrl.$viewValue));
                 ctrl.$render();
-            })
+            });
+
+            ctrl.$parsers.push(function (value) {
+                if (value === 10) {
+                    var dateArray = value.split("/");
+                    return new Date(dateArray[2], dateArray[1]-1, dateArray[0]).getTime();
+                }
+            });
+            
         }
     };
 });

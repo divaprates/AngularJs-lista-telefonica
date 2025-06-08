@@ -32,7 +32,7 @@
     <div class="jumbotron">
         <h3 ng-bind="app"></h3>
 
-        <ui-alert title="Ops, ocorreu um erro!" ng-if="!contatos.lenght">
+        <ui-alert title="Ops, ocorreu um erro!" ng-if="contatos.lenght == 0">
             {{error}}
         </ui-alert>
 
