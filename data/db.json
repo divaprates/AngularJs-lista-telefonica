@@ -55,6 +55,20 @@
       "cor": "orange",
       "serial": "\\689/M0B",
       "data": "2025-05-31T23:35:15.224Z"
+    },
+    {
+      "id": "6445",
+      "data": "2025-06-09T02:19:15.112Z",
+      "nome": "Renesmee Cullen",
+      "telefone": "7878-4545",
+      "operadora": {
+        "nome": "Tim",
+        "codigo": 41,
+        "preco": 3,
+        "id": "1bd8"
+      },
+      "cor": "brown",
+      "serial": ":I:1LP\"X"
     }
   ],
   "operadoras": [

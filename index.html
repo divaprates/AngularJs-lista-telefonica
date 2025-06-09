@@ -32,7 +32,7 @@
     <div class="jumbotron">
         <h3 ng-bind="app"></h3>
 
-        <ui-alert title="Ops, ocorreu um erro!" ng-if="contatos.lenght == 0">
+        <ui-alert title="Ops, ocorreu um erro!" ng-if="!contatos.length">
             {{error}}
         </ui-alert>
 
@@ -53,7 +53,7 @@
                 <td>{{contato.nome | name | ellipsis:12}}</td>
                 <td>{{contato.telefone}}</td>
                 <td>{{contato.operadora.nome | uppercase}}</td>
-                <td>{{contato.data | date:'dd/mm'}}</td>
+                <td>{{contato.data | date:'dd/MM'}}</td>
                 <td><div class="marcador-cor" ng-style="{'background-color': contato.cor}"></div></td>
             </tr>
         </table>
@@ -115,6 +115,7 @@
                                 id="data"
                                 placeholder="data"
                                 ng-model="contato.data"
+                                ng-required="false"
                                 name="data"
                                 ui-date>
                         </div>

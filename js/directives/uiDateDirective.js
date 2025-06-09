@@ -1,4 +1,4 @@
-angular.module("listaTelefonica").directive("uiDate", function () {
+angular.module("listaTelefonica").directive("uiDate", function ($filter) {
     return {
         require: "ngModel",
         link: function (scope, element, attrs, ctrl) {
@@ -27,6 +27,10 @@ angular.module("listaTelefonica").directive("uiDate", function () {
                     return new Date(dateArray[2], dateArray[1]-1, dateArray[0]).getTime();
                 }
             });
+
+            ctrl.$formatters.push(function (value) {
+                return $filter("date")(value, "dd/MM/yyyy");
+            })
             
         }
     };
