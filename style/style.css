@@ -37,3 +37,17 @@
 .ui-alert-message {
     color: #AF4341;
 }
+
+.ui-accordion-title {
+    background-color: #ccc; /* Cinza claro */
+    color: #000; /* Cor do texto */
+    padding: 6px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    font-size: 1.5rem; /* Tamanho da fonte (ajustável) */
+    font-weight: bold; /* Negrito */
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    box-sizing: border-box; /* Garante que o padding não ultrapasse a largura */
+    cursor: pointer;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}

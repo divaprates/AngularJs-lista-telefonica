@@ -24,6 +24,7 @@
     <script src="./js/filter/ellipsisFilter.js"></script>
     <script src="./js/directives/uiAlertDirective.js"></script>
     <script src="./js/directives/uiDateDirective.js"></script>
+    <script src="./js/directives/uiAccordionDirective.js"></script>
 
     <link rel="stylesheet" type="text/css" href="./style/style.css" media="screen" />
 </head>
@@ -31,6 +32,11 @@
 <body ng-controller="listaTelefonicaCtrl">
     <div class="jumbotron">
         <h3 ng-bind="app"></h3>
+
+        <ui-accordions>
+            <ui-accordion title="titulo">texto texto texto</ui-accordion>
+            <ui-accordion title="titulo2">texto1 texto1 texto1</ui-accordion>
+        </ui-accordions>
 
         <ui-alert title="Ops, ocorreu um erro!" ng-if="!contatos.length">
             {{error}}
