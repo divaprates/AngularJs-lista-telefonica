@@ -1,8 +1,16 @@
 angular.module("listaTelefonica").directive("uiAccordions", function () {
     return {
         controller: function ($scope, $element, $attrs) {
-            this.helloWorld = function () {
-                console.log("Hello World");
+            var accordions = [];
+
+            this.registerAccordion = function (accordion) {
+                accordions.push(accordion);
+            }
+
+            this.closeAll = function () {
+                accordions.forEach(function (accordion) {
+                    accordion.isOpened = false;
+                })
             }
         }
     };
@@ -17,10 +25,11 @@ angular.module("listaTelefonica").directive("uiAccordion", function () {
         transclude: true,
         require: "^uiAccordions",
         link: function (scope, element, attrs, ctrl) {
-            
+            ctrl.registerAccordion(scope);
+
             scope.open = function () {
-                ctrl.helloWorld();
-                scope.isOpened = !scope.isOpened;
+                ctrl.closeAll();
+                scope.isOpened = true;
             };
 
         }

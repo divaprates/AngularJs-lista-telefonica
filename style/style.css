@@ -39,6 +39,7 @@
 }
 
 .ui-accordion-title {
+    margin-top: 6px;
     background-color: #ccc; /* Cinza claro */
     color: #000; /* Cor do texto */
     padding: 6px; /* Espaçamento interno */
@@ -50,4 +51,10 @@
     cursor: pointer;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+}
+
+.ui-accordion-content {
+    padding: 6px;
+    background-color: #fff;
+    margin-bottom: 6px;
 }
