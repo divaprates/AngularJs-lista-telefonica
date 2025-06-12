@@ -40,6 +40,8 @@ json-server --watch db.json --port 3000
 
 ![alt text](assets/imageErro.png)
 
+![alt text](assets/imageErroTelefone.png)
+
 ![alt text](assets/imageDados.png)
 
 <hr/>
