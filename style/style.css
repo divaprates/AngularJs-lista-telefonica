@@ -40,12 +40,12 @@
 
 .ui-accordion-title {
     margin-top: 6px;
-    background-color: #ccc; /* Cinza claro */
-    color: #000; /* Cor do texto */
-    padding: 6px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
-    font-size: 1.5rem; /* Tamanho da fonte (ajustável) */
-    font-weight: bold; /* Negrito */
+    background-color: #ccc;
+    color: #000;
+    padding: 6px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
     width: 100%; /* Ocupa toda a largura do contêiner */
     box-sizing: border-box; /* Garante que o padding não ultrapasse a largura */
     cursor: pointer;
