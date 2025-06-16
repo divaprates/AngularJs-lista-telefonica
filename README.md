@@ -18,6 +18,9 @@ uppercase, date, filter, orderBy, currency
 **Diretivas**
 directive, replace, restrict, scope, transclude
 
+##
+Angular-route
+
 **Integração com o Back-end**
 GET, POST, DELETE
 
