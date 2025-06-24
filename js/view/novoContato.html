@@ -1,4 +1,4 @@
-<div class="jumbotron" ng-controller="listaTelefonicaCtrl">
+<div class="jumbotron">
         <h3 ng-bind="app"></h3>
 
         <div>
@@ -95,12 +95,7 @@
                 ng-disabled="contatoForm.$invalid">
                 Adicionar cotato
             </button>
-
-            <button ng-click="apagarContato(contatos)"
-                class="btn btn-danger btn-block mt-2"
-                ng-show="!isContatoSelecionado(contatos)">
-                Apagar cotato
-            </button>
+            
         </div>
 
     </div>
