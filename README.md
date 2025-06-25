@@ -47,6 +47,8 @@ json-server --watch db.json --port 3000
 
 ![alt text](assets/imageDados.png)
 
+![alt text](assets/imageApagar.png)
+
 <hr/>
 <div style="display: inline_block">
   <img align="center" alt="js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
