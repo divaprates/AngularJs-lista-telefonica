@@ -52,7 +52,11 @@
             </tr>
             <tr ng-repeat="contato in contatos | filter : {nome : busca} | orderBy : criterioDeOrdenacao : direcaoDaOrdenacao" ng-class="{selecionado : contato.selecionado}">
                 <td><input type="checkbox" ng-model="contato.selecionado"/></td>
-                <td>{{contato.serial | ellipsis:4}}</td>
+                <td>
+                    <a href="" ng-click="carregarDetalheContato(contato.id)">
+                        {{contato.serial | ellipsis:4}}
+                    </a>
+                </td>
                 <td>{{contato.nome | name | ellipsis:12}}</td>
                 <td>{{contato.telefone}}</td>
                 <td>{{contato.operadora.nome | uppercase}}</td>
