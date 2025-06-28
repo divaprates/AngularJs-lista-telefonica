@@ -31,9 +31,30 @@
 </head>
 
 <body ng-controller="listaTelefonicaCtrl">
-    
     <div class="jumbotron">
         <h3 ng-bind="app"></h3>
+
+            <table class="table text-left" ng-if="detalheContato">
+                <tr>
+                    <td><b>Nome: </b></td>
+                    <td>{{detalheContato.nome}}</td>
+                </tr>
+                <tr>
+                    <td><b>Telefone: </b></td>
+                    <td>{{detalheContato.telefone}}</td>
+                </tr>
+                <tr>
+                    <td><b>Data: </b></td>
+                    <td>{{detalheContato.data | date}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button ng-click="fecharDetalhe()" class="btn btn-primary btn-block mt-2">
+                            Fechar
+                        </button>
+                    </td>
+                </tr>
+            </table>
 
         <ui-alert title="Ops, ocorreu um erro!" ng-if="!contatos.length">
             {{error}}

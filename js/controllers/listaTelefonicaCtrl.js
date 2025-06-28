@@ -21,12 +21,15 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
         contatosAPI.getContato(id).then(function (response) {
             if(response != null) {
                 $scope.detalheContato = response.data;
-                console.log($scope.detalheContato);
             }
         }, function(error) {
             $scope.error = "Não foi possível carregar os dados!";
             console.log($scope.error);
         })
+    }
+
+    $scope.fecharDetalhe = function() {
+        $scope.detalheContato = null;
     }
 
     var carregarOperadoras = function() {
