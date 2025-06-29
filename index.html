@@ -25,6 +25,8 @@
     <script src="./js/filter/ellipsisFilter.js"></script>
     <script src="./js/directives/uiAlertDirective.js"></script>
     <script src="./js/directives/uiDateDirective.js"></script>
+    <script src="./js/interceptors/timestampInterceptor.js"></script>
+    <script src="./js/config/interceptorConfig.js"></script>
     <script src="./lib/ui/ui.js"></script>
 
     <link rel="stylesheet" type="text/css" href="./style/style.css" media="screen" />
@@ -37,7 +39,7 @@
             <table class="table text-left" ng-if="detalheContato">
                 <tr>
                     <td><b>Nome: </b></td>
-                    <td>{{detalheContato.nome}}</td>
+                    <td>{{detalheContato.nome | name}}</td>
                 </tr>
                 <tr>
                     <td><b>Telefone: </b></td>

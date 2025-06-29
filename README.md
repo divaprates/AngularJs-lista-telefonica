@@ -18,6 +18,8 @@ uppercase, date, filter, orderBy, currency
 **Diretivas**
 directive, replace, restrict, scope, transclude
 
+**Interceptors**
+
 ##
 Angular-route
 
