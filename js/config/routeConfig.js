@@ -8,6 +8,11 @@ angular.module("listaTelefonica").config(function ($routeProvider) {
 		templateUrl: "view/novoContato.html",
 		controller: "listaTelefonicaCtrl"
     });
-    
+
+    $routeProvider.when("/error", {
+		templateUrl: "view/error.html"
+    });
+	
+
     $routeProvider.otherwise({redirectTo: "/contatos"});
 });

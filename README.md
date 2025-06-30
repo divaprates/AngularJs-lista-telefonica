@@ -9,13 +9,13 @@
 ng-app, ng-controller, ng-model, ng-click, ng-repeat, ng-disabled, ng-options, ng-class, ng-style, ng-show, ng-if, ng-required, ng-minlength, ng-pattern
 $pristine, $dirty, $error
 
-**Serviços**
+**Serviços:**
 Factory, Service, Value, Provider, Config
 
 **Filtros:**
 uppercase, date, filter, orderBy, currency
 
-**Diretivas**
+**Diretivas:**
 directive, replace, restrict, scope, transclude
 
 **Interceptors**
