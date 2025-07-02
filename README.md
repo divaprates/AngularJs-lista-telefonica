@@ -19,7 +19,6 @@ uppercase, date, filter, orderBy, currency
 directive, replace, restrict, scope, transclude
 
 **Interceptors**
-error, timestamp, loading
 
 ##
 Angular-route
