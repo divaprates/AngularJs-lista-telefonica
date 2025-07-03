@@ -20,6 +20,9 @@ directive, replace, restrict, scope, transclude
 
 **Interceptors**
 
+**Performance**
+one-time bind
+
 ##
 Angular-route
 

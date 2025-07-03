@@ -73,7 +73,7 @@
                 {{error}}
             </ui-alert>
 
-            <input type="text" ng-model="busca" placeholder="Busca..." class="form-control" ng-if="contatos.length"/>
+            <input type="text" ng-model="busca" placeholder="Busca..." class="form-control" ng-show="contatos.length"/>
             <table class="table table-striped" ng-if="contatos.length">
                 <tr>
                     <th></th>
@@ -88,13 +88,13 @@
                     <td><input type="checkbox" ng-model="contato.selecionado"/></td>
                     <td>
                         <a href="" ng-click="carregarDetalheContato(contato.id)">
-                            {{contato.serial | ellipsis:4}}
+                            {{::contato.serial | ellipsis:4}}
                         </a>
                     </td>
                     <td>{{contato.nome | name | ellipsis:12}}</td>
-                    <td>{{contato.telefone}}</td>
-                    <td>{{contato.operadora.nome | uppercase}}</td>
-                    <td>{{contato.data | date:'dd/MM'}}</td>
+                    <td>{{::contato.telefone}}</td>
+                    <td>{{::contato.operadora.nome | uppercase}}</td>
+                    <td>{{::contato.data | date:'dd/MM'}}</td>
                     <td><div class="marcador-cor" ng-style="{'background-color': contato.cor}"></div></td>
                 </tr>
             </table>

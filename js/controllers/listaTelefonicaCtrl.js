@@ -4,7 +4,7 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
     $scope.cores = ["green",  "blue",  "red",  "yellow",  "orange",  "purple",  "pink",  "brown",  "gray",  "black"];
     $scope.contatos = [];
     $scope.operadoras = [];
-    $scope.contato = {data: new Date()}
+    $scope.contato = {data: new Date()};
 
     var carregarContatos = function() {
         contatosAPI.getContatos().then(function (response) {
