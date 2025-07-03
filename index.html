@@ -57,6 +57,10 @@
                         <td>{{detalheContato.data | date}}</td>
                     </tr>
                     <tr>
+                        <td><b>Preço operadora: </b></td>
+                        <td>{{detalheContato.operadora.precoComImposto | currency}}</td>
+                    </tr>
+                    <tr>
                         <td colspan="2">
                             <button ng-click="fecharDetalhe()" class="btn btn-primary btn-block mt-2">
                                 Fechar

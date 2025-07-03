@@ -21,6 +21,7 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
         contatosAPI.getContato(id).then(function (response) {
             if(response != null) {
                 $scope.detalheContato = response.data;
+                $scope.detalheContato.operadora.precoComImposto = calcularImposto($scope.detalheContato);
             }
         }, function(error) {
             $scope.error = "Não foi possível carregar os dados!";
@@ -72,6 +73,11 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
     $scope.ordenarPor = function (campo) {
         $scope.criterioDeOrdenacao = campo;
         $scope.direcaoDaOrdenacao = !$scope.direcaoDaOrdenacao;
+    }
+
+    var calcularImposto = function(contato) {
+        var imposto = 1.2;
+        return contato.operadora.preco * imposto;
     }
 
     carregarContatos();
