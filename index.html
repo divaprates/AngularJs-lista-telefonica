@@ -84,7 +84,7 @@
                     <th>Data</th>
                     <th></th>
                 </tr>
-                <tr ng-repeat="contato in contatos | filter : {nome : busca} | orderBy : criterioDeOrdenacao : direcaoDaOrdenacao" ng-class="{selecionado : contato.selecionado}">
+                <tr ng-repeat="contato in contatos | filter : {nome : busca} | orderBy : criterioDeOrdenacao : direcaoDaOrdenacao track by contato.id" ng-class="{selecionado : contato.selecionado}">
                     <td><input type="checkbox" ng-model="contato.selecionado"/></td>
                     <td>
                         <a href="" ng-click="carregarDetalheContato(contato.id)">
@@ -98,6 +98,11 @@
                     <td><div class="marcador-cor" ng-style="{'background-color': contato.cor}"></div></td>
                 </tr>
             </table>
+
+            <button ng-click="reset()"
+                class="btn btn-secondary btn-block mt-2">
+                Reset
+            </button>
             <hr/>
 
             <div>

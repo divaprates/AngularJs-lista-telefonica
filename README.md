@@ -21,7 +21,7 @@ directive, replace, restrict, scope, transclude
 **Interceptors**
 
 **Performance**
-one-time bind, ng-model-options
+one-time bind, ng-model-options, track by
 
 ##
 Angular-route

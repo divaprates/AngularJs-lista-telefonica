@@ -6,6 +6,11 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
     $scope.operadoras = [];
     $scope.contato = {data: new Date()};
 
+    var init = function() {
+        carregarContatos();
+        carregarOperadoras();
+    }
+
     var carregarContatos = function() {
         contatosAPI.getContatos().then(function (response) {
             if(response != null) {
@@ -80,6 +85,10 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
         return contato.operadora.preco * imposto;
     }
 
-    carregarContatos();
-    carregarOperadoras();
+    $scope.reset = function () {
+        console.log("reset");
+        $scope.contatos = angular.copy($scope.contatos);
+    }
+
+    init();
 });
