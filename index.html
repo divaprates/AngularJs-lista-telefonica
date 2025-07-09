@@ -110,6 +110,49 @@
                     <div class="container">
                         <div class="row mt-1">
                             <div class="col-3 text-justify">
+                                Tipo:
+                            </div>
+                            <div class="col">
+                                <select class="form-control" ng-model="contato.tipo">
+                                    <option value="">Selecione o tipo</option>
+                                    <option>Pessoa Física</option>
+                                    <option>Pessoa Jurídica</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mt-1" ng-if="contato.tipo==='Pessoa Física'">
+                            <div class="col-3 text-justify">
+                                Cpf:
+                            </div>
+                            <div class="col">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="cpf"
+                                    placeholder="cpf"
+                                    ng-model="contato.cpf"
+                                    name="cpf">
+                            </div>
+                        </div>
+
+                        <div class="row mt-1" ng-if="contato.tipo==='Pessoa Jurídica'">
+                            <div class="col-3 text-justify">
+                                Cnpj:
+                            </div>
+                            <div class="col">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="cnpj"
+                                    placeholder="cnpj"
+                                    ng-model="contato.cnpj"
+                                    name="cnpj">
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-3 text-justify">
                                 Nome:
                             </div>
                             <div class="col">
