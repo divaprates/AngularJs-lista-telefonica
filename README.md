@@ -48,11 +48,17 @@ json-server --watch db.json --port 3000
 
 ![alt text](assets/imageErro.png)
 
-![alt text](assets/imageErroTelefone.png)
+![alt text](assets/image01.png)
 
-![alt text](assets/imageDados.png)
+![alt text](assets/image02.png)
 
-![alt text](assets/imageApagar.png)
+![alt text](assets/image03.png)
+
+![alt text](assets/image04.png)
+
+![alt text](assets/image05.png)
+
+<hr/>
 
 <hr/>
 <div style="display: inline_block">
