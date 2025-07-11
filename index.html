@@ -45,6 +45,10 @@
 
                 <table class="table text-left" ng-if="detalheContato">
                     <tr>
+                        <td><b>Tipo pessoa: </b></td>
+                        <td>{{detalheContato.tipo}}</td>
+                    </tr>
+                    <tr>
                         <td><b>Nome: </b></td>
                         <td>{{detalheContato.nome | name}}</td>
                     </tr>
@@ -121,33 +125,37 @@
                             </div>
                         </div>
 
-                        <div class="row mt-1" ng-if="contato.tipo==='Pessoa Física'">
-                            <div class="col-3 text-justify">
-                                Cpf:
-                            </div>
-                            <div class="col">
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="cpf"
-                                    placeholder="cpf"
-                                    ng-model="contato.cpf"
-                                    name="cpf">
+                        <div  ng-show="contato.tipo==='Pessoa Física'">
+                            <div class="row mt-1">
+                                <div class="col-3 text-justify">
+                                    Cpf:
+                                </div>
+                                <div class="col">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="cpf"
+                                        placeholder="cpf"
+                                        ng-model="contato.cpf"
+                                        name="cpf">
+                                </div>
                             </div>
                         </div>
 
-                        <div class="row mt-1" ng-if="contato.tipo==='Pessoa Jurídica'">
-                            <div class="col-3 text-justify">
-                                Cnpj:
-                            </div>
-                            <div class="col">
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="cnpj"
-                                    placeholder="cnpj"
-                                    ng-model="contato.cnpj"
-                                    name="cnpj">
+                        <div ng-show="contato.tipo==='Pessoa Jurídica'">
+                            <div class="row mt-1">
+                                <div class="col-3 text-justify">
+                                    Cnpj:
+                                </div>
+                                <div class="col">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="cnpj"
+                                        placeholder="cnpj"
+                                        ng-model="contato.cnpj"
+                                        name="cnpj">
+                                </div>
                             </div>
                         </div>
 
@@ -166,6 +174,7 @@
                                     ng-required="true">
                             </div>
                         </div>
+                        
                         <div class="row mt-1">
                             <div class="col-3 text-justify">
                                 Telefone:

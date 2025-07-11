@@ -69,6 +69,22 @@
       },
       "cor": "pink",
       "serial": "YJ#;:3^Y"
+    },
+    {
+      "id": "2e7e",
+      "data": "2025-07-11T01:42:32.524Z",
+      "tipo": "Pessoa Jurídica",
+      "cnpj": "121212",
+      "nome": "Cullen",
+      "telefone": "7878-8989",
+      "operadora": {
+        "nome": "Vivo",
+        "codigo": 15,
+        "preco": 2,
+        "id": "c606"
+      },
+      "cor": "black",
+      "serial": "6RO35<+R"
     }
   ],
   "operadoras": [
