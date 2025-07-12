@@ -46,8 +46,6 @@ json-server --watch db.json --port 3000
 
 <hr/>
 
-![alt text](assets/imageErro.png)
-
 ![alt text](assets/image01.png)
 
 ![alt text](assets/image02.png)
@@ -57,6 +55,14 @@ json-server --watch db.json --port 3000
 ![alt text](assets/image04.png)
 
 ![alt text](assets/image05.png)
+
+![alt text](assets/image06.png)
+
+![alt text](assets/image07.png)
+
+![alt text](assets/image08.png)
+
+![alt text](assets/image09.png)
 
 <hr/>
 
