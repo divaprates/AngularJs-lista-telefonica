@@ -18,7 +18,7 @@ uppercase, date, filter, orderBy, currency
 **Diretivas:**
 directive, replace, restrict, scope, transclude
 
-**Performance**
+**Performance:**
 one-time bind, ng-model-options, track by
 
 **Interceptors**
